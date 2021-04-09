@@ -16,7 +16,7 @@ const App = () => {
     setRenderOnFlatList(false);
 
     PushNotificationIOS.requestPermissions();
-    PushNotificationIOS.addEventListener('notification', onRemoteNotification);
+    PushNotificationIOS.addEventListener('notification', onRemoteNotification); // Listens to drop of APNS file or target bundle simulator
   });
 
   const onRemoteNotification = async () => {
